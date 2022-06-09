@@ -15,7 +15,7 @@ export type ProductClient = {
   cdSaoLucas?: string | Nil;
   cdSUS?: string | Nil;
   cdSIMPRO?: string | Nil;
-  cdCaminho?: string | Nil;
+  dsCaminho?: string | Nil;
   cdIPI?: string | Nil;
   cdOperador?: string | Nil;
   cdAnvisa?: string | Nil;
@@ -36,8 +36,8 @@ export type ProductClient = {
   vlCustoMedio?: number | Nil;
   vlCustoAvulso?: number | Nil;
   NrCustoFixo?: number | Nil;
-  nrCustoFinal_a?: number | Nil;
-  nrCustoFinal_v?: number | Nil;
+  nrCustofinal_a?: number | Nil;
+  nrCustofinal_v?: number | Nil;
   nrCustoFinal_A_Antes?: number | Nil;
   nrCustoFinal_V_Antes?: number | Nil;
   nrPesoBruto?: number | Nil;
@@ -49,10 +49,10 @@ export type ProductClient = {
   NrOutrosImpostos?: number | Nil;
   nrMarkup_A?: number | Nil;
   nrMarkup_V?: number | Nil;
-  nrMarkup_A_ANTES?: number | Nil;
-  nrMarkup_V_ANTES?: number | Nil;
-  PVConcorrente_1?: number | Nil;
-  PVConcorrente_2?: number | Nil;
+  nrMarkup_V_Antes?: number | Nil;
+  nrMarkup_A_Antes?: number | Nil;
+  PVConcorrente1?: number | Nil;
+  PVConcorrente2?: number | Nil;
   nrRedIcmsCompra?: number | Nil;
   dsEmbalagem?: string | Nil;
   dsReferencia?: string | Nil;

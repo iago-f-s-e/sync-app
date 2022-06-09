@@ -46,7 +46,7 @@ export class Product implements ProductEntity {
   @Column({ type: 'varchar', name: 'cdSIMPRO', nullable: true })
   public readonly simproCode: string | Nil;
 
-  @Column({ type: 'varchar', name: 'cdCaminho', nullable: true })
+  @Column({ type: 'varchar', name: 'dsCaminho', nullable: true })
   public readonly pathCode: string | Nil;
 
   @Column({ type: 'varchar', name: 'cdIPI', nullable: true })
@@ -109,10 +109,10 @@ export class Product implements ProductEntity {
   @Column({ type: 'real', name: 'NrCustoFixo', nullable: true })
   public readonly fixedCostValue: number | Nil;
 
-  @Column({ type: 'real', name: 'nrCustoFinal_a', nullable: true })
+  @Column({ type: 'real', name: 'nrCustofinal_a', nullable: true })
   public readonly finalCostAValue: number | Nil;
 
-  @Column({ type: 'real', name: 'nrCustoFinal_v', nullable: true })
+  @Column({ type: 'real', name: 'nrCustofinal_v', nullable: true })
   public readonly finalCostVValue: number | Nil;
 
   @Column({ type: 'money', name: 'nrCustoFinal_A_Antes', nullable: true })
@@ -148,16 +148,16 @@ export class Product implements ProductEntity {
   @Column({ type: 'real', name: 'nrMarkup_V', nullable: true })
   public readonly markupVNumber: number | Nil;
 
-  @Column({ type: 'real', name: 'nrMarkup_A_ANTES', nullable: true })
+  @Column({ type: 'real', name: 'nrMarkup_A_Antes', nullable: true })
   public readonly beforeMarkupANumber: number | Nil;
 
-  @Column({ type: 'real', name: 'nrMarkup_V_ANTES', nullable: true })
+  @Column({ type: 'real', name: 'nrMarkup_V_Antes', nullable: true })
   public readonly beforeMarkupVNumber: number | Nil;
 
-  @Column({ type: 'real', name: 'PVConcorrente_1', nullable: true })
+  @Column({ type: 'real', name: 'PVConcorrente1', nullable: true })
   public readonly concurrentOneNumber: number | Nil;
 
-  @Column({ type: 'real', name: 'PVConcorrente_2', nullable: true })
+  @Column({ type: 'real', name: 'PVConcorrente2', nullable: true })
   public readonly concurrentTwoNumber: number | Nil;
 
   @Column({ type: 'real', name: 'nrRedIcmsCompra', nullable: true })
