@@ -1,19 +1,17 @@
 import { Injectable } from '@nestjs/common';
 import { propertyMutualProduct, endpoints } from '@src/domain/constants';
-import { MutualProductDTO, ProductEntity } from '@src/domain/dtos/product';
+import { ProductEntity } from '@src/domain/dtos/product';
 import { HttpService } from '@src/infra/http/services';
-import { STORE_GROUP_ID } from '@src/server/settings';
 import { GenericObject } from '@src/types/global';
-import { CloudProduct } from '../dtos';
 
 @Injectable()
 export class CloudProductService {
   constructor(private readonly httpService: HttpService) {}
 
-  private getCloudProduct(product: ProductEntity): CloudProduct {
+  private getCloudProduct(product: ProductEntity): GenericObject {
     const arr = Object.entries(product);
 
-    const mutualProduct = arr.reduce<GenericObject>((acc, item) => {
+    return arr.reduce<GenericObject>((acc, item) => {
       const [key, value] = item;
 
       if (!propertyMutualProduct.includes(key)) return acc;
@@ -21,9 +19,7 @@ export class CloudProductService {
       acc[key] = value;
 
       return acc;
-    }, {}) as MutualProductDTO;
-
-    return { ...mutualProduct, storeGroupId: STORE_GROUP_ID }; // TODO: passar pelo token
+    }, {});
   }
 
   public updateProduct(data: ProductEntity): void {

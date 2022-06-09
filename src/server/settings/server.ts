@@ -6,7 +6,7 @@ export const RESERVE_PORT = process.env.RESERVE_PORT || '8082';
 
 export const IS_PRODUCTION = process.env.NODE_ENV === 'production';
 
-export const STORE_ID = process.env.STORE_ID || '0';
+export const STORE_ID = Number(process.env.STORE_ID) || 0;
 
 export const STORE_GROUP_ID = Number(process.env.STORE_GROUP_ID) || 0;
 

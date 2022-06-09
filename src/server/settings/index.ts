@@ -6,3 +6,4 @@ export * from './server';
 export * from './external';
 export * from './context';
 export * from './microservices';
+export * from './auth';
