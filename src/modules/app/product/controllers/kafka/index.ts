@@ -7,17 +7,15 @@ import { UpdateProductUseCase } from '../../useCases';
 import * as Settings from '@src/server/settings';
 
 @Controller()
-export class ProductControllerKafka {
+export class KafkaProductController {
   constructor(private readonly service: UpdateProductUseCase) {}
 
   @MessagePattern(topics.UPDATE_PRODUCT)
-  public async update(@Payload() message: MessageResponse<MutualProductDTO>): Promise<void> {
+  public update(@Payload() message: MessageResponse<MutualProductDTO>): void {
     const { originId, ...product } = message.value;
 
-    console.log('origin: ', originId);
-
     if (originId !== Settings.STORE_ID) {
-      await this.service.cloudUpdate(product);
+      this.service.cloudUpdate(product).catch(err => console.error(err));
     }
   }
 }

@@ -26,6 +26,6 @@ export class CloudProductService {
     const url = `${endpoints.product.UPDATE_PRODUCT}${data.id}`;
     const cloudProduct = this.getCloudProduct(data);
 
-    this.httpService.put(url, cloudProduct).catch(_ => console.error('Tentar novamente'));
+    this.httpService.put(url, cloudProduct).catch(err => console.error('Tentar novamente', err));
   }
 }

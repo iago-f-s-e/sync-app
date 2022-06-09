@@ -2,6 +2,7 @@ import { AxiosInstance } from 'axios';
 import * as Services from '@src/server/settings';
 import { AuthService } from '@src/modules/auth/services';
 import { httpClient } from '../config';
+import { Injectable } from '@nestjs/common';
 type Headers = {
   authorization: string;
 };
@@ -10,6 +11,7 @@ type Config = {
   headers: Headers;
 };
 
+@Injectable()
 export class HttpService {
   private readonly http: AxiosInstance;
 

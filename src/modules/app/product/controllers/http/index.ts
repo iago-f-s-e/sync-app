@@ -4,7 +4,7 @@ import { productToEntity } from '@src/domain/toEntity';
 import { UpdateProductUseCase } from '../../useCases/update-product';
 
 @Controller()
-export class ProductHttpController {
+export class HttpProductController {
   constructor(private readonly updateUseCase: UpdateProductUseCase) {}
 
   @Put()
