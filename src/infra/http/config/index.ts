@@ -67,7 +67,6 @@ function responseErrorInterceptor(error: AxiosError<AppError>) {
 }
 
 const httpClient = axios.create({
-  baseURL: Settings.EXTERNAL_SERVICES,
   timeout: Settings.EXTERNAL_TIMEOUT
 });
 

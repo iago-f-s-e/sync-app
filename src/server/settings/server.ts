@@ -8,9 +8,13 @@ export const IS_PRODUCTION = process.env.NODE_ENV === 'production';
 
 export const STORE_ID = process.env.STORE_ID || '0';
 
+export const STORE_GROUP_ID = Number(process.env.STORE_GROUP_ID) || 0;
+
 export const SERVER_ID = process.env.SERVER_ID || '0';
 
 export const STORE = `store_id_${STORE_ID}`;
+
+export const STORE_GROUP = `store_group_id_${STORE_ID}`;
 
 export const RESERVE_BASE_URL = `http://${HOST}:${RESERVE_PORT}`;
 

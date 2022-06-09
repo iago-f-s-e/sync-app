@@ -1,13 +1,14 @@
 import { Body, Controller, Put } from '@nestjs/common';
 import { ProductClient } from '@src/domain/dtos/product';
 import { productToEntity } from '@src/domain/toEntity';
+import { CloudProductService } from '@src/infra/cloud/services';
 
 @Controller()
 export class ProductHttpController {
-  @Put()
-  public update(@Body() body: ProductClient): any {
-    console.log(productToEntity(body));
+  constructor(private readonly cloudService: CloudProductService) {}
 
-    return productToEntity(body);
+  @Put()
+  public update(@Body() body: ProductClient): void {
+    this.cloudService.updateProduct(productToEntity(body));
   }
 }

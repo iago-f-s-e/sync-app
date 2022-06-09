@@ -5,3 +5,4 @@ export * from './kafka';
 export * from './server';
 export * from './external';
 export * from './context';
+export * from './microservices';
