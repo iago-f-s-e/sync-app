@@ -1,7 +1,8 @@
 import { Injectable } from '@nestjs/common';
-import { ProductEntity } from '@src/domain/dtos/product';
+import { MutualProductDTO, ProductEntity } from '@src/domain/dtos/product';
 import { CloudProductService } from '@src/infra/cloud/services';
 import { ProductRepository } from '@src/infra/database/repositories';
+import { UpdateResult } from 'typeorm';
 
 @Injectable()
 export class UpdateProductUseCase {
@@ -10,7 +11,11 @@ export class UpdateProductUseCase {
     private readonly cloudService: CloudProductService
   ) {}
 
-  public async update(data: ProductEntity): Promise<void> {
+  public async cloudUpdate(data: MutualProductDTO): Promise<UpdateResult> {
+    return this.repository.update(data);
+  }
+
+  public async exec(data: ProductEntity): Promise<void> {
     return this.repository.update(data).then(() => this.cloudService.updateProduct(data));
   }
 }

@@ -10,6 +10,6 @@ export class ProductHttpController {
   @Put()
   @HttpCode(HttpStatus.NO_CONTENT)
   public update(@Body() body: ProductClient): Promise<void> {
-    return this.updateUseCase.update(productToEntity(body));
+    return this.updateUseCase.exec(productToEntity(body));
   }
 }
