@@ -212,7 +212,7 @@ export class Product implements ProductEntity {
   public readonly isAssortedWeight!: boolean;
 
   @Column({ type: 'bit', name: 'naoCreditarIcmsCompra', nullable: true })
-  public readonly noCreditIcmsPurchase!: boolean;
+  public readonly noCreditIcmsPurchase!: boolean | Nil;
 
   @Column({ type: 'varchar', name: 'impressoraComanda' })
   public readonly commandPrinter!: string;

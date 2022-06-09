@@ -70,7 +70,7 @@ export type MutualProductDTO = {
   cfopEntFDescription?: string | Nil;
   isIcmsFightPoverty: boolean;
   isAssortedWeight: boolean;
-  noCreditIcmsPurchase: boolean;
+  noCreditIcmsPurchase: boolean | Nil;
   commandPrinter: string;
   mvast: number;
   mvastret: number;

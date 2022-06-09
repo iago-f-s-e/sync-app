@@ -1,7 +1,7 @@
 import { MigrationInterface, QueryRunner } from "typeorm";
 
-export class Product1654720908652 implements MigrationInterface {
-    name = 'Product1654720908652'
+export class Product1654798459407 implements MigrationInterface {
+    name = 'Product1654798459407'
 
     public async up(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.query(`
@@ -20,7 +20,7 @@ export class Product1654720908652 implements MigrationInterface {
                 "cdSaoLucas" varchar(255),
                 "cdSUS" varchar(255),
                 "cdSIMPRO" varchar(255),
-                "cdCaminho" varchar(255),
+                "dsCaminho" varchar(255),
                 "cdIPI" varchar(255),
                 "cdOperador" varchar(255),
                 "cdAnvisa" varchar(255),
@@ -41,8 +41,8 @@ export class Product1654720908652 implements MigrationInterface {
                 "vlCustoMedio" float,
                 "vlCustoAvulso" real,
                 "NrCustoFixo" real,
-                "nrCustoFinal_a" real,
-                "nrCustoFinal_v" real,
+                "nrCustofinal_a" real,
+                "nrCustofinal_v" real,
                 "nrCustoFinal_A_Antes" money,
                 "nrCustoFinal_V_Antes" money,
                 "nrPesoBruto" real,
@@ -54,10 +54,10 @@ export class Product1654720908652 implements MigrationInterface {
                 "NrOutrosImpostos" real,
                 "nrMarkup_A" real,
                 "nrMarkup_V" real,
-                "nrMarkup_A_ANTES" real,
-                "nrMarkup_V_ANTES" real,
-                "PVConcorrente_1" real,
-                "PVConcorrente_2" real,
+                "nrMarkup_A_Antes" real,
+                "nrMarkup_V_Antes" real,
+                "PVConcorrente1" real,
+                "PVConcorrente2" real,
                 "nrRedIcmsCompra" real,
                 "dsEmbalagem" varchar(255),
                 "dsReferencia" varchar(255),
