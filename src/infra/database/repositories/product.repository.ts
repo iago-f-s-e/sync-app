@@ -13,4 +13,8 @@ export class ProductRepository {
 
     return this.product.update({ id }, product);
   }
+
+  public findAll(): Promise<Product[]> {
+    return this.product.find();
+  }
 }
