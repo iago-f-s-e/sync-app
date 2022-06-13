@@ -21,7 +21,8 @@
     "dist",
     "jest.config.js",
     "src/infra/database/migrations",
-    "src/server/config"
+    "src/server/config",
+    "src/domain/toClient/product.ts"
   ],
   "rules": {
     "max-depth": ["warn", 3],

@@ -1,7 +1,7 @@
 import { Body, Controller, Get, HttpCode, HttpStatus, Put } from '@nestjs/common';
 import { ProductClient } from '@src/domain/dtos/product';
+import { productToClient } from '@src/domain/toClient/product';
 import { productToEntity } from '@src/domain/toEntity';
-import { Product } from '@src/infra/database/entities';
 import { FindProductUseCase, UpdateProductUseCase } from '../../useCases';
 
 @Controller()
@@ -18,7 +18,7 @@ export class HttpProductController {
   }
 
   @Get()
-  public getAll(): Promise<Product[]> {
-    return this.findUseCase.exec();
+  public async getAll(): Promise<ProductClient[]> {
+    return (await this.findUseCase.exec()).map(product => productToClient(product));
   }
 }

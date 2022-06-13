@@ -70,7 +70,7 @@ export type ProductClient = {
   dsCFOPEntF?: string | Nil;
   dsICMSCombatePobreza: boolean;
   PesoVariado: boolean;
-  naoCreditarIcmsCompra: boolean;
+  naoCreditarIcmsCompra: boolean | Nil;
   impressoraComanda: string;
   MVAST: number;
   MVASTRET: number;
