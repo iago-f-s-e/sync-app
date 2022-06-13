@@ -2,4 +2,4 @@ import 'dotenv/config';
 
 import { bootstrap } from './server';
 
-bootstrap().catch(err => console.error(err));
+bootstrap().catch(err => console.error('error: ', err));
